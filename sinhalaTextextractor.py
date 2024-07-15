@@ -13,7 +13,7 @@ def main():
     try:
         # Create document for extraction with configurations
         pdf_document = Document(
-            document_path='Dataset/raw_pdf/1456.pdf',
+            document_path='Dataset/raw_pdf/6346.pdf',
             language='sin'
         )
         pdf2text = PDF2Text(document=pdf_document)
@@ -21,7 +21,7 @@ def main():
         content = pdf2text.extract()
         logging.info("Text extraction completed.")
         # Specify the path for the output text file
-        output_file_path = 'Dataset/extracted_texts/1456_extracted_content.txt'
+        output_file_path = 'Dataset/extracted_texts/6346_extracted_content.txt'
         if isinstance(content, list):
             content = "\n".join([item.get('text', '') for item in content if isinstance(item, dict)])
         # Write the content to the text file
