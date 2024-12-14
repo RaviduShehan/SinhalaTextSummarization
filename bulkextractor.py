@@ -4,18 +4,15 @@ import logging
 import sys
 import os
 
+import pdf_list
+
 logging.basicConfig(level=logging.INFO)
 
 
 def main():
     try:
         # List of PDF files to process
-        pdf_files = [
-            'Dataset/raw_pdf/1492.pdf',
-            'Dataset/raw_pdf/6332.pdf',
-            'Dataset/raw_pdf/6326.pdf',
-            # Add more file paths as needed
-        ]
+        pdf_files = pdf_list.pdf_list
 
         for pdf_file in pdf_files:
             # Extracting filename without extension
